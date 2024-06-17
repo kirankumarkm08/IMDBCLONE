@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="mx-auto w-[1280px] text-xl p-5 gap-5">
+    <div className="mx-auto max-w-[1280px] text-xl p-5 gap-5">
       <p>
         The IMDb (Internet Movie Database) is an extensive online database that
         provides information about films, television programs, home videos,
@@ -14,6 +14,7 @@ const About = () => {
         professionals, offering insights into the intricate details of media
         production and reception.
       </p>
+      <br />
       <p>
         One of IMDb's most popular features is its user-generated ratings and
         reviews. This system allows millions of users worldwide to rate movies
@@ -25,6 +26,7 @@ const About = () => {
         cinematic excellence, guiding viewers to some of the most critically
         acclaimed films ever made.
       </p>
+      <br />
       <p>
         In recent years, IMDb has expanded its offerings beyond the traditional
         database format. IMDbPro, a subscription service, provides industry
