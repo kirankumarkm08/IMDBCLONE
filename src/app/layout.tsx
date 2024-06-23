@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "../Components/Header";
 const inter = Inter({ subsets: ["latin"] });
 import Provider from "./Providers";
+import NavBar from "../Components/NavBar";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Provider>
           <Header />
+          <NavBar />
           {children}
         </Provider>
       </body>
