@@ -1,8 +1,12 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Results from "../Components/Results";
 
 const API_KEY = "938c5aa757bcf6964e5fcede15b6cb97";
+// if (!API_KEY) {
+//   throw new Error("API_KEY environment variable is not set");
+// }
 
 const Home = ({ searchParams }) => {
   const [movies, setMovies] = useState([]);
@@ -12,7 +16,7 @@ const Home = ({ searchParams }) => {
     const fetchData = async () => {
       const genre = searchParams.genre || "fetchTrending";
       const url = `https://api.themoviedb.org/3${
-        genre === "fetchTrending" ? `/trending/all/week` : `/movie/top_rated`
+        genre === "fetchTrending" ? `/movie/top_rated` : `/trending/all/week`
       }?api_key=${API_KEY}&language=en-US&page=1`;
 
       try {
@@ -21,6 +25,7 @@ const Home = ({ searchParams }) => {
           throw new Error("Something went wrong");
         }
         const data = await res.json();
+        console.log(data);
         setMovies(data.results);
       } catch (error) {
         setError(error.message);
@@ -28,7 +33,7 @@ const Home = ({ searchParams }) => {
     };
 
     fetchData();
-  }, [searchParams]);
+  }, []);
 
   if (error) {
     return <div>Error: {error}</div>;
@@ -36,12 +41,7 @@ const Home = ({ searchParams }) => {
 
   return (
     <div>
-      <h1>Home</h1>
-      <ul>
-        {movies.map((movie) => (
-          <li key={movie.id}>{movie.title || movie.name}</li>
-        ))}
-      </ul>
+      <Results results={movies} />
     </div>
   );
 };
