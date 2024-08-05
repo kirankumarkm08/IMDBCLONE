@@ -20,7 +20,7 @@ export default function SearchPage({ params }) {
       console.log(results);
     }
     search();
-  }, []);
+  }, [seachTerm]);
 
   return <div>{results && <Results results={results} />}</div>;
 }
