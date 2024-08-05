@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
   return (
     <div className="mx-auto max-w-[1280px] text-xl p-5 gap-5">
-      <p>
+      {/* <p>
         <h2>
           {" "}
           The IMDb (Internet Movie Database) is an extensive online database
@@ -45,7 +45,7 @@ const About = () => {
           age, ensuring it remains a relevant and valuable resource for both
           entertainment enthusiasts and professionals alike.
         </h2>
-      </p>
+      </p> */}
     </div>
   );
 };
