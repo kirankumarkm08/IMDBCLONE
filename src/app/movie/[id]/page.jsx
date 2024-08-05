@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 const api = "938c5aa757bcf6964e5fcede15b6cb97";
-export default async function MoviePage({ params }) {
+export default function MoviePage({ params }) {
   const [movie, setMovie] = useState([]);
   useEffect(() => {
     const getImage = async () => {
@@ -23,7 +23,7 @@ export default async function MoviePage({ params }) {
       }
     };
     getImage();
-  }, []);
+  }, [params]);
 
   return (
     <div className="w-full">
