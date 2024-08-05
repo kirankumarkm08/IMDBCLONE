@@ -12,8 +12,9 @@ export default function Card({ result }) {
           }`}
           width={500}
           height={200}
-          className="rounded-lg"
+          objectFit="cover"
           alt={result.title || result.name}
+          className="rounded-lg object-cover"
         />
         <div className="p-2">
           <p className="line-clamp-2 text-md">{result.overview}</p>

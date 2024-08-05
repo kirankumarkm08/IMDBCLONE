@@ -11,7 +11,7 @@ const NavItems = ({ title, param }) => {
     <Link
       className={`${
         genre === param
-          ? "underline underline-offset-8 decoration-4 rounded-md dark:decoration-amber-500 :decoration-black"
+          ? "underline underline-offset-8 decoration-4 rounded-md dark:decoration-amber-500 "
           : ""
       }`}
       href={`/?genre=${param}`}

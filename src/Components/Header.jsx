@@ -10,8 +10,8 @@ export const Header = () => {
   return (
     <Link href={"/"} className="flex  mx-10  justify-between  py-5 ">
       <div className="flex gap-5">
-        <MenuItems title="Home" Icon={FaHome} address={"/"} />
-        <MenuItems title="About" Icon={FaInfoCircle} address={"/About"} />
+        <MenuItems title="Home" Icon={FaHome} address="/" />
+        <MenuItems title="About" Icon={FaInfoCircle} address="/About" />
       </div>
       <div className=" text-2xl font-bold  flex gap-5 items-center">
         <DarkMode />
