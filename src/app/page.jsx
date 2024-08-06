@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import Results from "../Components/Results";
-import SearchBox from "@/Components/SearchBox";
 
 const API_KEY = "938c5aa757bcf6964e5fcede15b6cb97";
 

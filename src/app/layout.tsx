@@ -6,6 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 import Provider from "./Providers";
 import NavBar from "../Components/NavBar";
 import SearchBox from "../Components/SearchBox";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,7 +24,10 @@ export default function RootLayout({
         <Provider>
           <Header />
           <NavBar />
-          <SearchBox />
+          <Suspense>
+            <SearchBox />
+          </Suspense>
+
           {children}
         </Provider>
       </body>
