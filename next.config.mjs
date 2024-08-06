@@ -8,6 +8,7 @@ const nextConfig = {
         pathname: "**",
       },
     ],
+    content: ["./pages/**/*.{html,js}", "./components/**/*.{html,js}"],
   },
 };
 
