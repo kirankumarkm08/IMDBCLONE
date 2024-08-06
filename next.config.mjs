@@ -8,8 +8,12 @@ const nextConfig = {
         pathname: "**",
       },
     ],
-    content: ["./pages/**/*.{html,js}", "./components/**/*.{html,js}"],
   },
+  content: [
+    "./pages/**/*.{ts,js,jsx,tsx}",
+    "./app/**/*.{ts,js,jsx,tsx}",
+    "./Components/**/*.{ts,js,jsx,tsx}",
+  ],
 };
 
 export default nextConfig;
